@@ -1,0 +1,59 @@
+<div class="card">
+<div class="card-body">
+
+<div class="card">
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    Repositório Computação-PUCCAMP
+  </a>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a href="/user/logout" type="button"class="btn btn-danger">Sair</a>
+  </li>
+</ul>
+</nav>
+</div>
+
+<br>
+<br>
+
+
+<div class="card text-center">
+  <div class="card-header">
+    <b>Compartilhe documentos!</b>
+  </div>
+  <div class="card-body">
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">1° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">2° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">3° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">4° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">5° Ano</button>
+            <div id="upl" class="collapse">
+            <br>
+                <form action="/user/home" method="POST">
+                <label for="conteudo">Conteúdo</label>
+                <textarea name="conteudo" class="form-control" required></textarea>
+                <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            
+            </div>
+  </div>
+</div>
+
+
+{{#each postagens}}
+  <div class="card m-2">
+      <div class="card-body">
+        <b>{{email}}</b>
+          <p>{{conteudo}}</p>
+            <br>
+            <br>
+              <small><p class="text-right">Data: {{data}}</p></small>
+      </div>
+  </div>
+{{else}}
+  <p>Nenhuma postagem encontrada!</p>
+{{/each}}
+
+</div>
+</div>
