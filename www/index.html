@@ -39,20 +39,49 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Xprovas</title>
 </head>
 
 <body>
     <div class="app">
-        <h1>OLA TESTE 123</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
+        <h1>Repositório Computação-PUCCAMP</h1>
+
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a href="/user/logout" type="button"class="btn btn-danger">Sair</a>
+  </li>
+</ul>
+</nav>
+</div>
+
+<br>
+<br>
+
+
+<div class="card text-center">
+  <div class="card-header">
+    <b>Compartilhe documentos!</b>
+  </div>
+  <div class="card-body">
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">1° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">2° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">3° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">4° Ano</button>
+    <button type="button" class="btn btn-outline-success" data-toggle="collapse" data-target="#upl">5° Ano</button>
+            <div id="upl" class="collapse">
+            <br>
+                <form action="/user/home" method="POST">
+                <label for="conteudo">Conteúdo</label>
+                <textarea name="conteudo" class="form-control" required></textarea>
+                <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            
+            </div>
+  </div>
+</div>
+	
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
+    
         app.initialize();
     </script>
 </body>
